@@ -19,6 +19,9 @@
 
 .swiper-wrapper {
   max-height: 490px;
+  @media screen and (max-width: 767px) {
+    max-height: 344px;
+  }
 }
 
 .parallax-bg {
