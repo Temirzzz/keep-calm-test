@@ -12,27 +12,13 @@ const SwiperSlider = ({ images }) => {
     <Swiper
       modules={[Scrollbar, Mousewheel, Parallax]}
       spaceBetween={10}
-      slidesPerView={1.5}
+      slidesPerView={"auto"}
       mousewheel={true}
       initialSlide={0}
       breakpoints={{
-        1241: {
-          spaceBetween: 20,
-          slidesPerView: 4,
-          touchRatio: false,
-        },
         768: {
-          spaceBetween: 20,
-          slidesPerView: 3.5,
+          spaceBetween: 40,
           touchRatio: false,
-        },
-        500: {
-          spaceBetween: 20,
-          slidesPerView: 3,
-        },
-        321: {
-          spaceBetween: 10,
-          slidesPerView: 2,
         },
       }}
       preloadImages={false}
