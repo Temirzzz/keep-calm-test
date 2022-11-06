@@ -1,0 +1,47 @@
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+
+  &_logo {
+    width: 213px;
+    height: 36px;
+    @media screen and (max-width: 767px) {
+      width: 118px;
+      height: 20px;
+    }
+  }
+
+  &_phone {
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  &_first {
+    max-width: 860px;
+    max-height: 480px;
+    margin-right: 128px;
+    margin-left: -260px;
+    @media screen and (max-width: 1239px) {
+      margin: 0 auto 64px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &_second {
+    max-width: 599px;
+    max-height: 411px;
+    margin-left: 128px;
+    @media screen and (max-width: 1239px) {
+      order: -1;
+      margin: 0 auto 64px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 40px;
+    }
+  }
+}
