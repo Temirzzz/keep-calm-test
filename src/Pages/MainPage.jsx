@@ -13,7 +13,7 @@ import FourthSrc from "../assets/images/4.png";
 
 const MainPage = () => {
   return (
-    <div className="main-page">
+    <>
       <Header />
       <Block
         classNameBlock="block block_pad"
@@ -156,7 +156,7 @@ const MainPage = () => {
         />
       </Block>
       <Footer />
-    </div>
+    </>
   );
 };
 
