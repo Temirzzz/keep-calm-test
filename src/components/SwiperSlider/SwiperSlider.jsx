@@ -1,36 +1,47 @@
 import React from "react";
 import Image from "../../UI/Image/Image";
-import { Scrollbar, Mousewheel } from "swiper";
+import { Scrollbar, Mousewheel, Parallax } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/scrollbar";
 import "swiper/css/mousewheel";
+import "swiper/css/parallax";
 import "./SwiperSlider.scss";
 
 const SwiperSlider = ({ images }) => {
   return (
     <Swiper
-      modules={[Scrollbar, Mousewheel]}
-      // scrollbar={{ draggable: true }}
-      spaceBetween={30}
-      slidesPerView={4.5}
+      modules={[Scrollbar, Mousewheel, Parallax]}
+      spaceBetween={10}
+      slidesPerView={1.5}
       mousewheel={true}
       initialSlide={0}
       breakpoints={{
-        767: {
+        1241: {
+          spaceBetween: 20,
+          slidesPerView: 4,
           touchRatio: false,
         },
+        768: {
+          spaceBetween: 20,
+          slidesPerView: 3.5,
+          touchRatio: false,
+        },
+        500: {
+          spaceBetween: 20,
+          slidesPerView: 3,
+        },
+        321: {
+          spaceBetween: 10,
+          slidesPerView: 2,
+        },
       }}
+      preloadImages={false}
+      watchSlidesProgress={true}
       parallax={true}
       className="parallax-bg"
-      data-swiper-parallax="-23%"
     >
       {images.map((image) => (
-        <SwiperSlide
-          data-swiper-parallax="-300"
-          data-swiper-parallax-duration="600"
-          key={image.id}
-        >
+        <SwiperSlide key={image.id}>
           <Image src={image.src} alt={image.name} />
         </SwiperSlide>
       ))}

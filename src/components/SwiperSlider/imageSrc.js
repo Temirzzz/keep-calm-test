@@ -10,7 +10,6 @@ import Slider9 from "../../assets/images/slider/slider-9.png";
 import Slider10 from "../../assets/images/slider/slider-10.png";
 import Slider11 from "../../assets/images/slider/slider-11.png";
 import Slider12 from "../../assets/images/slider/slider-12.png";
-import Slider13 from "../../assets/images/slider/slider-13.png";
 
 export const images = [
   {
@@ -62,11 +61,6 @@ export const images = [
     name: "image10",
     id: 10,
     src: Slider8,
-  },
-  {
-    name: "image11",
-    id: 11,
-    src: Slider13,
   },
   {
     name: "image12",
