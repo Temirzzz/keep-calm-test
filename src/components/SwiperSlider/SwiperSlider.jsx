@@ -21,9 +21,16 @@ const SwiperSlider = ({ images }) => {
           touchRatio: false,
         },
       }}
+      parallax={true}
+      className="parallax-bg"
+      data-swiper-parallax="-23%"
     >
       {images.map((image) => (
-        <SwiperSlide key={image.id}>
+        <SwiperSlide
+          data-swiper-parallax="-300"
+          data-swiper-parallax-duration="600"
+          key={image.id}
+        >
           <Image src={image.src} alt={image.name} />
         </SwiperSlide>
       ))}
